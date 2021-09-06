@@ -1,0 +1,25 @@
+.container {
+  border: 3px solid lightgray;
+  display: flex;
+  flex-direction: row;
+  /* justify direction is ur flex direction */
+  justify-content: center;
+  /* align the item in cross axis */
+  align-items: center;
+  /* the container here is still a block element, which need space to fill elements */
+  height: 90vh;
+  /* align-content only works when you have multiple lines in flex container */
+  align-content: center;
+  flex-wrap: wrap;
+}
+.box {
+  width: 5rem;
+  height: 5rem;
+  background: gold;
+  margin: 1rem;
+  /* flex sizing properties apply to flex item */
+  /* flex-basis based on main axis and cover height/width */
+  flex-basis: 10rem;
+  /* flex-grow: 1 */
+  /* flex-shrink: 1; */
+}

@@ -1,0 +1,59 @@
+/* p {
+  background-color: orange;
+} */
+/* direct children should use > 
+direct subling should use + #product + p*/
+/* #product > p {
+  background-color: green;
+}
+#product + p {
+  background-color: blue;
+}
+#product ~ p {
+  background-color: salmon;
+}
+span {
+  background-color: yellow;
+} */
+/* style can based on attributes  */
+/* this means reference includes google will apply to this style  */
+
+a[href*="google"] {
+  color: red;
+}
+/* href start with  http will apply to this style */
+a[href^="https"] {
+  color: grey;
+}
+/* end with .com will apply  */
+a[href$=".com"] {
+  color: grey;
+}
+/* pseudo-element to style part of element */
+p::first-letter {
+  font-weight: bolder;
+  font-size: 30px;
+}
+/* p::first-line {
+  color: blue;
+} */
+p::selection {
+  background-color: brown;
+}
+p::before,
+p::after {
+  content: "...";
+  display: "block";
+}
+
+.box {
+  font-size: 40px;
+  width: 200px;
+  height: 200px;
+  border: 10px dashed red;
+  background-color: chocolate;
+  border-width: 10px 20px 10px 10px; /* trbl*/
+  border-radius: 0%;
+  box-shadow: 0 0 10px green; /* positive right/down * the thrid variable is  blur*/
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}

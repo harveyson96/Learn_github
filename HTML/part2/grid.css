@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(2, 100px);
+  /* grid-template: repeat(3, 100px) / repeat(2, 100px); */
+  grid-template: repeat(3, 100px) / 100px 30fr 70fr;
+  /* define the name for each grid-column: ; */
+  grid-template-areas:
+    "zone1 zone1"
+    "zone3 zone4"
+    "zone5 zone6";
+  /* fr represents the precentage of the avaliable free space */
+  border: 3px, solid grey;
+  justify-items: stretch;
+  align-items: stretch;
+  /* content represents the entire grid, item represent individual items in grid  */
+  /* the default value is strach */
+  justify-content: stretch;
+  align-content: stretch;
+  height: 100vh;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+/* justify-items: along horizontal axis */
+/* align-items: along  vertical axis */
+.box {
+  /* width: 5rem;
+  height: 5rem; */
+  background: gold;
+}
+
+.box-one {
+  /* let the item start at col 2 and end at 3 */
+  /* grid-column: 2 / 4; */
+  grid-area: zone1;
+}

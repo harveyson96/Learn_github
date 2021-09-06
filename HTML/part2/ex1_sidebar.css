@@ -1,0 +1,24 @@
+.section {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 0.2rem;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+li {
+  margin: 0.5rem 0;
+}
+@media screen and (min-width: 758px) {
+  ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  li {
+    margin: 0 1rem;
+  }
+}

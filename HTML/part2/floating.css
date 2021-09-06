@@ -1,0 +1,21 @@
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  background-color: gold;
+  /* the text wrap around the image  */
+  float: left;
+  margin-right: 0.5rem;
+}
+/* whereever we use float we should clear after */
+.clear {
+  /* clear float property settings*/
+  clear: both;
+}
+.tweet {
+  border: 3px solid lightgray;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
