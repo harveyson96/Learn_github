@@ -1,0 +1,14 @@
+body {
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* set a new font family to cover the inherit one */
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+  /* bold 700  normal 400 */
+  font-weight: 100;
+  font-style: italic;
+}
