@@ -1,0 +1,10 @@
+body {
+  background: url(images/bg-paper@2x.jpg);
+  background-repeat: no-repeat;
+  /* background-position: 100% 100px; */
+  /* the default body width is 0, when you set the bgsize, make sure body width is valid */
+  background-size: cover;
+  /* let the background relative stay to the view port */
+  background-attachment: fixed;
+  height: 100vh;
+}
