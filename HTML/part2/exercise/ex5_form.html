@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    /> -->
+
+    <link rel="stylesheet" href="ex5_form.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+  <body>
+    <form action="">
+      <h1 class="title">Please Sign in</h1>
+
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Email address"
+          name="Email"
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="password"
+          placeholder="Password"
+          name="Password"
+        />
+      </div>
+      <div class="form-group">
+        <input class="chkbox" type="checkbox" name="Remember" id="Remember" />
+        <label for="Remember">remember-me</label>
+      </div>
+      <button class="btn" type="sumbit">Sign in</button>
+      <p>Copyright &copy;2020</p>
+    </form>
+  </body>
+</html>

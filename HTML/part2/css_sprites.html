@@ -36,5 +36,36 @@
       <p>search css filter for more functions</p>
       <img src="images/meal.jpg" alt="" class="meal_filter" />
     </section>
+    <section>
+      <h2>Hign Density Image</h2>
+      <p>only apply to fixed size image</p>
+      <img src="images/meal.jpg" alt="blabla" class="meal" />
+      <img
+        src="images/meal.jpg"
+        alt="blabla"
+        class="meal"
+        srcset="
+          images/meal.jpg     400w,
+          images/meal@2x.jpg  800w,
+          images/meal@3x.jpg 1200w
+        "
+      />
+    </section>
+    <section>
+      <h2>resolution switching</h2>
+      <img
+        src="images/meal.jpg"
+        alt="blabla"
+        class="meal"
+        srcset="
+          images/meal.jpg     400w,
+          images/meal@2x.jpg  800w,
+          images/meal@3x.jpg 1200w
+        "
+        sizes="(max-width: 500px) 100vw,
+        (max-width: 700px) 50vw, 33vw
+        "
+      />
+    </section>
   </body>
 </html>

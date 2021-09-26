@@ -1,0 +1,43 @@
+body {
+  display: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+/* .box:hover {
+  transform: rotate(15deg); 
+  transform: translate(10px, 10px); 
+   the order matters
+   transform: translateX(50px) rotate(45deg);
+  transform: rotate(45deg) translateX(50px);
+} */
+/* 3d transformation */
+/* perspective is the dis between screen and u  */
+.box:hover {
+  /* transform: perspective(200px) translateZ(50px); */
+  /*transform-origin: 0 0;  top-left corner of the box is the rotate origin */
+  transform-origin: 0 50%; /* mid-left corner of the box is the rotate origin */
+}
+.container {
+  perspective: 200px;
+}
+.container:hover .box {
+  transform: perspective(200px) rotateY(45deg);
+  /* beacuse each box has it own perspective, so the rotate looks wired. */
+  /*transform-origin: 0 0;  top-left corner of the box is the rotate origin */
+  transform-origin: 0 50%; /* mid-left corner of the box is the rotate origin */
+}
+.box_1 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+  transition: transform 0.5s ease-in 1s;
+}
+.box_1:hover {
+  transform: rotate(45deg);
+}

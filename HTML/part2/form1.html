@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link rel="stylesheet" href="form1.css" />
+    <title>Form1</title>
+  </head>
+  <body>
+    <!-- input properties: value prepopulated text -->
+    <!-- placeholder is label -->
+    <!-- maxlength -->
+    <form><input type="date" value="pre" /></form>
+    <textarea name="" id="" cols="30" rows="10">Texthere</textarea>
+    <section>
+      <h2>Datafields</h2>
+      <input
+        type="text"
+        list="countries"
+        value="You can also type in unlisted thing"
+        autocapitalize="off"
+      />
+
+      <datalist id="countries">
+        <!-- create own attribute by "data-value" -->
+        <option data-value="1">Australia</option>
+        <option>Canada</option>
+        <option>India</option>
+        <option>United Status</option>
+      </datalist>
+    </section>
+    <section>
+      <h2>dragdown list</h2>
+      <form action="">
+        <select>
+          <optgroup label="front-end coureses">
+            <option value="" selected>html</option>
+            <option value="">css</option>
+            <option value="">js</option>
+          </optgroup>
+        </select>
+      </form>
+    </section>
+    <section>
+      <h2>checkbox</h2>
+      <form>
+        <input type="checkbox" id="front-end" checked /><label
+          class="label-inline"
+          for="front-end"
+          >front-end</label
+        >
+        <input type="checkbox" id="back-end" disabled /><label
+          class="label-inline"
+          for="back-end"
+          >back-end</label
+        >
+      </form>
+    </section>
+    <section>
+      <h2>radiobutton</h2>
+      <div>
+        <input type="radio" name="memebership" id="silver" checked />
+        <label for="silver" class="label-inline">Silver</label>
+      </div>
+      <div>
+        <input type="radio" name="memebership" id="gold" />
+        <label for="Gold" class="label-inline">Gold</label>
+      </div>
+    </section>
+    <section>
+      <h2>range selector</h2>
+      <input type="range" min="0" max="100" value="100" />
+    </section>
+    <section>
+      <h2>files selector</h2>
+      <form><input type="file" multiple accept=".jpg" /></form>
+    </section>
+    <section>
+      <h2>hidden field</h2>
+      Only use hidden field for edit field id
+    </section>
+    <section>
+      <h2>data validation</h2>
+      <form>
+        <input type="text" required minlength="2" /><button type="sumbit">
+          Sumbit
+        </button>
+      </form>
+    </section>
+    <section>
+      <h2>sumbitting form</h2>
+      <form action="https://formspree.io/f/mpzkbdwy" method="POST">
+        <input type="text" placeholder="Name" name="name" />
+        <input type="text" placeholder="Email" name="email" />
+        <!-- two types of sumbit, only button can add icons -->
+        <!-- <input type="sumbit" value="" Sumbit /> -->
+        <button type="submit"><i class="fas fa-alert"></i>Sumbit</button>
+      </form>
+    </section>
+  </body>
+</html>

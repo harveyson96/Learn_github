@@ -34,8 +34,11 @@
   display: inline-block;
 }
 .meal {
-  width: 100px;
+  width: 400px;
   height: auto;
+}
+/* use persudo class for reaction */
+.meal_filter:hover {
   clip-path: polygon(
     20% 0%,
     0% 20%,
@@ -50,8 +53,5 @@
     80% 0%,
     50% 30%
   );
-}
-/* use persudo class for reaction */
-.meal_filter:hover {
   filter: grayscale(30%) blur(1px);
 }
