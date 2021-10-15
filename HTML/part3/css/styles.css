@@ -4,6 +4,7 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
 }
@@ -22,6 +23,7 @@ h2,
 h3 {
   color: var(--color-headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 h1 {
   font-size: 7rem;
@@ -91,7 +93,7 @@ a {
 }
 .badge--small {
   font-size: 1.6rem;
-  padding： 0.5rem 1.5rem;
+  padding：0.5rem 1.5rem;
 }
 @media screen and (min-width: 1024px) {
   .badge {
@@ -136,8 +138,15 @@ a {
   width: 40px;
   height: 40px;
 }
+.icon--small{
+  width: 30px;
+  height: 30px;
+}
 .icon--primary {
   fill: var(--color-primary);
+}
+.icon--white{
+  fill: white;
 }
 .icon-container {
   background-color: #f3f9fa;
@@ -150,7 +159,9 @@ a {
   /* vertical axis */
   align-items: center;
 }
-
+.icon-container--accent{
+  background: var(--color-accent);
+}
 /* buttons */
 .btn {
   border-radius: 40px;
@@ -169,6 +180,12 @@ a {
 *::after,
 *::before {
   box-sizing: border-box;
+}
+.btn .icon{
+width: 2rem;
+height: 2rem;
+margin-right: 1rem;
+vertical-align: middle;
 }
 .btn--primary {
   background-color: var(--color-primary);
@@ -198,6 +215,10 @@ a {
 .btn--outline {
   border: 2px solid black;
   background: #fff;
+}
+.btn--stretched{
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 @media screen and (min-width: 1024px) {
   .btn {
@@ -256,10 +277,22 @@ a {
   background: var(--color-secondary);
   color: #fff;
 }
+.card__primary .badge--primary {
+  background: #126de4;
+}
 .card__secondary .badge--secondary {
   background: #02cdf1;
 }
 /* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+} 
+.plan:hover{
+  transform: scale(1.05);
+}
+.plan--popular:hover{
+  transform: scale(1.15);
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -281,7 +314,9 @@ a {
   letter-spacing: 1px;
   display: block;
 }
-
+.plan--popular{
+  transform: scale(1.1);
+}
 .plan--popular .card__header {
   position: relative;
 }
@@ -311,4 +346,307 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
+}
+/* Media */
+/* Using flex to put the icon next to paragraph */
+.media{
+display: flex;
+}
+.media__title{
+margin-top: 0;
+}
+.media__body{
+  margin: 0 2rem;
+}
+.media__image{
+  margin-top: 1rem;
+}
+
+/* Quotes */
+.quote{
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--color-body-darker);
+  line-height: 1.3;
+}
+.quote__tex::before{
+content: open-quote;
+}
+.quote__tex::after{
+  content: close-quote;
+  }
+.quote__author{
+  
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+.quote__organization{
+  font-size: 2rem;
+  font-style: normal;
+  color: var(--color-headings);
+  opacity: 0.4;
+}
+.quote__line{
+  position: relative;
+  bottom: 10px;
+}
+@media screen and (min-width: 1024px){
+  .quote{
+    font-size: 2rem;
+  }
+  .quote__author{
+    font-size: 2.4rem;
+  }
+  .quote__organization{
+    font-size: 1.6rem;
+  }
+}
+/* Grid */
+.grid{
+  display: grid;
+  
+}
+@media screen and (min-width: 768px) {
+  .grid--1x2{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x3{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Testimonial */
+.testimonial{
+  padding: 3rem;
+}
+.testimonial__image{
+  position: relative;
+}
+/* make the image responsible with the screen  */
+/* deriect child selector >, most of time don't use it, if you change the markup, you need to come back and change again */
+.testimonial__image > img{
+  width: 100%;
+
+}
+.testimonial__image > .icon-container{
+  position: absolute;
+  top: 3rem;
+  right: -30px;
+}
+.testimonial .quote{
+  margin-left: 6rem;
+}
+@media screen and (min-width: 768px) {
+  .testimonial .quote, .testimonial .quote__author{
+    font-size: 2.4rem;
+  }
+  .testimonial__image > .icon-container{
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+  }
+}
+
+/* callout */
+.callout{
+  padding: 4rem;
+  border-radius: 5px;
+}
+.callout--primary{
+background: var(--color-primary);
+color: #fff;
+}
+.callout__heading{
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
+}
+.callout .btn{
+
+  justify-self: center;
+  align-self: center;
+}
+.callout__content{
+  text-align: center;
+}
+
+@media screen and (min-width: 768px){
+  .callout__content{
+    text-align: left;
+  }
+
+}
+/* Collapsibles */
+.collapsible__header{
+  display: flex;
+  justify-content: space-between;
+}
+.collapsible__heading{
+  margin-top: 0;
+  font-size: 3rem;
+}
+.collapsible__chevron{
+ transform: rotate(-90deg);
+ transition: transform 0.3s;
+}
+.collapsible__content{
+  max-height: 0;
+  overflow: hidden;
+  transition:  all 0.5s;
+  opacity: 0;
+
+}
+.collapsible--expanded .collapsible__chevron{
+  transform: rotate(0);
+  transition: transform 0.5s;
+}
+.collapsible--expanded .collapsible__content{
+  max-height: 100vh;
+  opacity: 1;
+}
+/* Blocks */
+.block{
+  --padding-vertical: 6rem;
+  padding:  var(--padding-vertical) 2rem;
+}
+.block__header{
+  text-align: center;
+}
+.block__heading{
+  margin-top: 0;
+}
+.block--dark {
+  background: #000;
+  color: #7b868b
+}
+.block--dark .block__heading{
+  color: #fff;
+}
+.block--skewed-right{
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0 80%,  100% 100%, 100% 0, 0 0);
+}
+.block--skewed-left{
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0 100%, 100% 80%, 100% 0, 0 0);
+}
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* Navigation */
+.nav{
+  background: #000;
+  /* flex let the elements lay in one line */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+.nav__item{
+  padding: 0.5rem 2rem;
+  border-bottom: 0.1px solid #fff;
+}
+/* always have anchor on navigation bar */
+.nav__list a{
+  color: #d2d0db;
+  transition: color 0.3s
+
+}
+.nav__item > a:hover{
+  color: #fff;
+}
+.nav__toggler{
+opacity: 0.8;
+transition: box-shadow .15s;
+}
+/* double class seclector */
+.nav.collapsible--expanded .nav__toggler{
+opacity: 1;
+box-shadow: 0 0 0 3px #666;
+border-radius: 5px;
+max-height: 100%;
+opacity: 1;
+}
+.nav__brand{
+transform: translateY(5px);
+}
+
+@media  screen and (min-width: 768px) {
+  .nav__toggler{
+    display: none;
+  }
+  .nav__list{
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    /* Because we use collapsible components here, remember to set this to visible */
+    max-height: 100%;
+    opacity: 1;
+  }
+  .nav__item{
+    border: 0;
+  }
+}
+
+/* Hero */
+.hero__tagline{
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+.hero__image{
+  width: 100%;
+}
+
+@media screen and (min-width:768px){
+  .hero{
+    padding-top: 0;
+  }
+  .hero__content{
+  text-align: left;
+  align-self: center;
+  }
+}
+
+/* Domain Block */
+.block-domain .input-group{
+ box-shadow: 0 0 30px 20px #e6ebee;
+ border: 0;
+ margin: 4rem auto;
+ max-width: 670px;
+}
+
+.block-domain__prices{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto ;
+}
+@media screen and (min-width: 768px){
+  .block-domain__prices{grid-template-columns: repeat(auto-fit, minmax(100px,1fr));}
+}
+
+/* Plans Block */
+.block-plans .grid{
+  gap: 8rem 4rem;
+}
+.block-plans .card{
+  max-width: 500px;
+  margin: 0 auto;
 }

@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Document</title>
   </head>
+  <style>
+    .card {
+      border-radius: 7px;
+      box-shadow: 0 0 20px 10px #f3f3f3;
+      font-size: 1.6rem;
+      overflow: hidden;
+    }
+  </style>
   <body>
-    <section class="block container block-plans">
-      <div class="grid grid--1x3">
-        <div class="plan">
-          <div class="card card__secondary">
+    <div style="padding: 6rem 2rem">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr)">
+        <div class="plan plan--popular">
+          <div class="card card__primary">
             <header class="card__header">
               <h3 class="plan__name">Entry</h3>
               <span class="plan__price">$14</span>
@@ -36,13 +36,14 @@
             </div>
           </div>
         </div>
+
         <div class="plan plan--popular">
           <div class="card card__primary">
             <header class="card__header">
               <h3 class="plan__name">Entry</h3>
               <span class="plan__price">$14</span>
               <span class="plan__billing-cycle">/month</span>
-              <span class="badge badge--primary badge__small">10% Off</span>
+              <span class="badge badge--secondary badge__small">10% Off</span>
               <span class="plan__description">Easy start on the cloud</span>
             </header>
             <div class="card__body">
@@ -55,8 +56,9 @@
             </div>
           </div>
         </div>
-        <div class="plan">
-          <div class="card card__secondary">
+
+        <div class="plan plan--popular">
+          <div class="card card__primary">
             <header class="card__header">
               <h3 class="plan__name">Entry</h3>
               <span class="plan__price">$14</span>
@@ -75,6 +77,6 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </body>
 </html>
